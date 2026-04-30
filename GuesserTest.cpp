@@ -20,3 +20,9 @@ TEST(GuesserTest, smoke_test)
   Guesser object("Secret");
   ASSERT_EQ( 1+1, 2 );
 }
+
+TEST(GuesserTest, identical_string)
+{
+  Guesser object("Secret");
+  ASSERT_EQ(object.distance("Secret"), 0);
+}
